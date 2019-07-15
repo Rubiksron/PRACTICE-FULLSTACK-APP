@@ -1,0 +1,30 @@
+{
+  "name": "practice-fullstack-app",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "app.js",
+  "scripts": {
+    "test": "testeroni"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rubiksron/PRACTICE-FULLSTACK-APP.git"
+  },
+  "keywords": [
+    "oh",
+    "yeah!"
+  ],
+  "author": "ronald dunphy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rubiksron/PRACTICE-FULLSTACK-APP/issues"
+  },
+  "homepage": "https://github.com/Rubiksron/PRACTICE-FULLSTACK-APP#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
