@@ -22,7 +22,8 @@
   "homepage": "https://github.com/Rubiksron/PRACTICE-FULLSTACK-APP#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.6.4"
+    "mongoose": "^5.6.4",
+    "superagent": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
