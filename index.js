@@ -1,22 +1,22 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const lessonsRouter = require('./routes/lessons.js')
-const lessons = require('./api.js');
+// const lessons = require('./public/api.js');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://localhost/lessons';
+const db = mongoose.connection;
 
 mongoose.connect(
   DATABASE_URL,
   { useNewUrlParser: true }
 );
-const db = mongoose.connection;
+
 db.on('error', error => console.error(error));
 db.once('open', () => console.log('Connected to Database'));
-
+app.use(express.static('public'));
 app.use(express.json());
 app.use('/lessons', lessonsRouter);
-
 app.listen(PORT, console.log(`listening on port: ${PORT}`));
 
 // app.get('/', (req, res) => res.send('Hell, Low Whirled'));

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="stylesheet" href="./style.css"/>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>PRACTICE-FULLSTACK-APP</title>
+</head>
+<body>
+  <h2>RESTful API</h2><br/>
+
+  <form id="user_form">
+    <field>
+      <label>GET:</label><br />
+      <label>Lesson ID</label>
+      <input id="lessonId" type="text" placeholder="lesson id"/>
+      <button value="submit">Get Lessons</button>
+    </field>
+  </form>
+
+  <form id="user_post">
+    <field>
+      <label>POST:</label><br />
+      <label>Lesson Title</label>
+      <input name="lessonTitle" type="text" placeholder="Lesson Title"/>
+      <label>Lesson Author</label>
+      <input name="lessonAuthor" type="text" placeholder="Lesson Author" />
+      <button value="submit">Post Lesson</button>
+    </field>
+  </form>
+
+  <form id="user_delete">
+    <field>
+      <label>DELETE:</label><br />
+      <label>Lesson ID:</label>
+      <input name="lessonID" placeholder="Lesson ID"/>
+      <button value="submit">Delete Lesson</button>
+    </field>
+  </form>
+
+  <form id="user_update">
+    <field>
+      <label>UPDATE:</label><br />
+      <label>Lesson ID to update:</label>
+      <input name="lessonID" type="text" placeholder="Lesson ID"/>
+      <label>Lesson Title:</label>
+      <input name="lessonTitle"  type="text" placeholder="Lesson Title"/>
+      <label>Lesson Author</label>
+      <input name="lessonAuthor" type="text" placeholder="Lesson Author" />
+      <button value="submit">PATCH</button>
+    </field>
+  </form>
+
+  <h2>Lessons: </h2>
+  <div id="results"></div>
+
+  <script type="text/javascript" src="./api.js"></script>
+</body>
+</html>
