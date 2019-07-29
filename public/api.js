@@ -4,18 +4,18 @@ getForm.addEventListener('submit', getRequest);
 
 function getRequest(event) {
   event.preventDefault();
-  var lessonId = event.target.lessonId.value;
-  fetch(`/lessons/${lessonId}`)
+  var lessonID = event.target.lessonID.value;
+  fetch(`/lessons/${lessonID}`)
   .then((response) => response.json())
   .then(function(data) {
-    if(!lessonId) {
+    if(!lessonID) {
       document.getElementById('results').innerHTML = '';
       for(var i in data) {
-        document.getElementById('results').innerHTML += data[i].lessonTitle + data[i].lessonID + '<br />';
+        document.getElementById('results').innerHTML += 'Title: ' + data[i].lessonTitle + '<br />' + ' ID: ' + data[i]._id + '<br />';
       }
     } else {
       document.getElementById('results').innerHTML = '';
-      document.getElementById('results').innerHTML = data.lessonTitle + '<br />';
+      document.getElementById('results').innerHTML = 'Title: ' + data.lessonTitle + '<br />' + ' ID: ' + data._id + '<br />';
     }
     console.log('data: ', data);
   })
